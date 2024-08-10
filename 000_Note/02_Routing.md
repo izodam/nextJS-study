@@ -165,3 +165,13 @@ about us의 하위 페이지들도 copyright이 뜬다. 예를 들어 '/about-us
 폴더 구조를 이렇게 만들고 `http://localhost:3000/movies/121212`에 접속하면 잘 작동하는 것을 확인 할 수 있다
 
 ### 동적 라우팅 한 값을 받고싶다면?
+
+```ts
+export default function MovieDetail({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  return <h1>Movie {id}</h1>;
+}
+```
